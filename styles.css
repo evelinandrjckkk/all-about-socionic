@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5e6d7; /* Світлий фон */
+    color: #333; /* Темний текст */
+    text-align: center;
+    transition: background 0.5s, color 0.5s, border-color 0.5s;
+    margin: 0;
+    padding: 0;
+}
+
+/* Темна тема */
+.dark-mode {
+    background-color: #111; /* Чорний фон */
+    color: #ccc; /* Світлий текст */
+}
+
+/* Сірі відтінки для кнопок та інших елементів */
+.dark-mode .tab-btn {
+    background-color: #444;
+    color: #ccc;
+    border: 1px solid #888;
+}
+
+.dark-mode .tab-btn:hover {
+    background-color: #555;
+}
+
+.dark-mode .tab-btn.active {
+    background-color: #666;
+}
+
+/* Кнопка зміни теми */
+#theme-toggle {
+    background-color: white; /* Світлий фон */
+    color: black; /* Чорний текст */
+    border: 1px solid black; /* Чорна обводка */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    transition: 0.3s;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Для темної теми */
+.dark-mode #theme-toggle {
+    background-color: #333; /* Темний фон */
+    color: white; /* Білий текст */
+    border: 1px solid #666;
+}
+
+/* Кнопка в темній темі */
+#theme-toggle.rotate {
+    animation: rotate 0.6s forwards;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+/* Для кнопок та елементів при темній темі */
+.dark-mode nav {
+    background-color: #222; /* Темний фон для навігації */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .tab-btn {
+    background-color: #444; /* Темний фон для кнопок */
+    color: #ccc; /* Світлий текст */
+    border: 1px solid #888;
+}
+
+.dark-mode .tab-btn:hover {
+    background-color: #555; /* Наведення на кнопку */
+}
+
+/* Загальний стиль для кнопок */
+.tab-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tab-btn:hover {
+    background-color: #ddd;
+}
+
+.tab-btn.active {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Змінюємо фон для вкладок при темній темі */
+.dark-mode .tab-content {
+    background-color: #333; /* Темний фон для вкладок */
+    color: #ccc; /* Світлий текст у вкладках */
+    border: 1px solid #666;
+}
+
+
+/* Навігаційні кнопки */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.tab-btn {
+    background: white;
+    color: black;
+    border: 1px solid black; /* Чорна обводка */
+    padding: 8px 15px; /* Зменшено padding для тонших кнопок */
+    cursor: pointer;
+    font-size: 14px; /* Зменшено розмір шрифта */
+    margin: 5px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    white-space: normal; /* Дозволяє розбивати текст на кілька рядків */
+    text-align: center;
+    display: flex; /* Встановлюємо flexbox */
+    justify-content: center; /* Вирівнюємо по горизонталі */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    min-width: 100px; /* Мінімальна ширина для кнопок */
+    max-width: 150px; /* Максимальна ширина кнопок */
+    box-sizing: border-box; /* Враховуємо padding в розміри */
+}
+
+.tab-btn:hover {
+    background: #d6d6d6;
+}
+
+.tab-btn.active {
+    background: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Для того, щоб кнопки розміщувалися в рядку без переносу */
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+/* Додаємо конкретні кольори для кожної кнопки */
+.tab-btn.home-btn { background-color: #D0A0F0; } /* Ніжно фіолетовий */
+.tab-btn.theory-psysophia-btn { background-color: #F0C0A0; } /* Ніжно синій */
+.tab-btn.calculator-psysophia-btn { background-color: #A0D0F0; } /* Ніжно голубий */
+.tab-btn.compatibility-psysophia-btn { background-color: #F8D0D0; } /* Світло червоний */
+.tab-btn.socionics-btn { background-color: #A0F0A0; } /* Ніжно зелений */
+.tab-btn.theory-socionics-btn { background-color: #F0E0D0; } /* Ніжно бежевий */
+.tab-btn.calculator-socionics-btn { background-color: #A0D0F0; } /* Ніжно голубий */
+.tab-btn.tables-socionics-btn { background-color: #F0C0A0; } /* Світло оранжевий */
+.tab-btn.subtypes-socionics-btn { background-color: #F0E050; } /* Світло жовтий */
+.tab-btn.compatibility-socionics-btn { background-color: #F8D0D0; } /* Світло червоний */
+
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Фон сторінки при зміні вкладки */
+body.home-bg { background-color: #D0A0F0 !important; }
+body.theory-psysophia-bg { background-color: #F0C0A0 !important; }
+body.calculator-psysophia-bg { background-color: #A0D0F0 !important; }
+body.compatibility-psysophia-bg { background-color: #F8D0D0 !important; }
+body.socionics-bg { background-color: #A0F0A0 !important; }
+body.theory-socionics-bg { background-color: #F0E0D0 !important; }
+body.calculator-socionics-bg { background-color: #A0D0F0 !important; }
+body.tables-socionics-bg { background-color: #F0C0A0 !important; }
+body.subtypes-socionics-bg { background-color: #F0E050 !important; }
+body.compatibility-socionics-bg { background-color: #F8D0D0 !important; }
